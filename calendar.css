@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --txt-color: crimson;
+}
+
+body {
+  background: #212121;
+  font-family: montserrat;
+}
+
+.container {
+  background: white;
+  width: 60%;
+  padding: 1em;
+  margin: 5rem auto;
+  border-radius: 10px;
+  box-shadow: .4rem .3rem 1rem #ddd;
+}
+ /* --- Header ---  */
+.container header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.month {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--txt-color);
+}
+.arrows-left {
+  color: var(--txt-color);
+}
+.arrows-right {
+  text-align: right;
+  color: var(--txt-color);
+}
+
+ /* --- Calendar ---  */
+.week {
+  color: var(--txt-color);
+}
+
+/* --- week & days ---  */
+.week , .days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.days {
+  height: 240px;
+}
+.days div, .week div{
+  width: 14.28%;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.days div {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.days div:hover {
+  background-color: var(--txt-color);
+  color: white;
+}
+.days .today{
+  background-color: var(--txt-color);
+  color: white;
+}
+.days .fade {
+  color: #ACC8E5;
+}
